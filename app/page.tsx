@@ -396,6 +396,102 @@ function Footer() {
           <a href="#cenik" className="hover:text-white transition-colors">Ceník</a>
           <a href={`${APP_URL}/register`} className="hover:text-white transition-colors">Registrace</a>
           <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
+          <a href="mailto:info@izodesk.cz" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Kontakt</a>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+// ─── Stránka ───────────────────────────────────────────────────────────────
+
+export default function HomePage() {
+  return (
+    <>
+      <Nav />
+      <Hero />
+      <SocialProof />
+      <Features />
+      <Pricing />
+      <Faq />
+      <Cta />
+      <Footer />
+    </>
+  );
+}
+</>
+  );
+}
+ge() {
+  return (
+    <>
+      <Nav />
+      <Hero />
+      <SocialProof />
+      <Features />
+      <Pricing />
+      <Faq />
+      <Cta />
+      <Footer />
+    </>
+  );
+}
+-relaxed">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─── CTA ───────────────────────────────────────────────────────────────────
+
+function Cta() {
+  return (
+    <section className="py-24 px-6 bg-slate-900">
+      <div className="max-w-2xl mx-auto text-center">
+        <h2 className="text-4xl font-black italic uppercase tracking-tighter text-white mb-4">
+          Přestaňte řešit papírování.
+          <br />
+          <span className="text-brand">Začněte vydělávat.</span>
+        </h2>
+        <p className="text-slate-400 mb-10 text-lg">
+          Vyzkoušejte IZODesk 14 dní zdarma. Bez kreditní karty.
+        </p>
+        <a
+          href={`${APP_URL}/register`}
+          className="inline-block bg-brand text-white font-black text-lg px-10 py-5 rounded-2xl hover:bg-brand-dark transition-all shadow-xl shadow-orange-500/20 hover:-translate-y-0.5"
+        >
+          Začít zdarma →
+        </a>
+        <p className="text-slate-600 text-sm mt-4">
+          Otázky? <a href="mailto:info@izodesk.cz" className="text-brand hover:underline">info@izodesk.cz</a>
+        </p>
+      </div>
+    </section>
+  );
+}
+
+// ─── Footer ────────────────────────────────────────────────────────────────
+
+function Footer() {
+  return (
+    <footer className="bg-slate-950 text-slate-500 py-12 px-6">
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
+        <div>
+          <div className="font-black italic text-xl tracking-tighter uppercase text-white mb-2">
+            IZO<span className="font-light text-slate-500 not-italic">Desk</span>
+          </div>
+          <p className="text-sm">Správa zakázek pro řemeslníky.</p>
+          <p className="text-xs mt-2">© {new Date().getFullYear()} IZODesk. Všechna práva vyhrazena.</p>
+        </div>
+        <div className="grid grid-cols-2 gap-x-16 gap-y-2 text-sm">
+          <a href="#funkce" className="hover:text-white transition-colors">Funkce</a>
+          <a href={`${APP_URL}/login`} className="hover:text-white transition-colors">Přihlásit se</a>
+          <a href="#cenik" className="hover:text-white transition-colors">Ceník</a>
+          <a href={`${APP_URL}/register`} className="hover:text-white transition-colors">Registrace</a>
+          <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
           <a href="mailto:info@izodesk.cz" className="hover:text-white transition-colors">Kontakt</a>
         </div>
       </div>
