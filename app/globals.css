@@ -7,11 +7,6 @@
   --brand-dark: #e07830;
 }
 
-html { scroll-behavior: smooth; }
-
-@layer utilities {
-  .bg-brand { background-color: var(--brand); }
-  .text-brand { color: var(--brand); }
-  .border-brand { border-color: var(--brand); }
-  .hover\:bg-brand-dark:hover { background-color: var(--brand-dark); }
+html {
+  scroll-behavior: smooth;
 }
