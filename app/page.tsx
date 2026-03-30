@@ -4,6 +4,38 @@ import Link from "next/link";
 
 const APP_URL = "https://app.izodesk.cz";
 
+// ─── Ikony ─────────────────────────────────────────────────────────────────
+
+const Icons = {
+  Clipboard: () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6"/><path d="M9 16h6"/><path d="M9 8h.01"/></svg>
+  ),
+  Dollar: () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+  ),
+  Check: () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+  ),
+  Receipt: () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5V17"/><path d="M12 7V6.5"/></svg>
+  ),
+  File: () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M9 15h6"/><path d="M9 11h6"/></svg>
+  ),
+  Users: () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+  ),
+  Smartphone: () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+  ),
+  Palette: () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.92 0 1.71-.74 1.71-1.67 0-.43-.16-.83-.41-1.17-.25-.33-.41-.75-.41-1.17 0-.93.78-1.7 1.71-1.7h2.6c2.94 0 5.4-2.46 5.4-5.4 0-5.02-4.75-9-10.6-9Z"/></svg>
+  ),
+  ArrowRight: () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="inline-block ml-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+  )
+};
+
 // ─── Navigace ──────────────────────────────────────────────────────────────
 
 function Nav() {
@@ -70,9 +102,9 @@ function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href={`${APP_URL}/register`}
-            className="bg-brand text-white font-black text-base px-8 py-4 rounded-2xl hover:bg-brand-dark transition-all shadow-lg shadow-orange-200 hover:shadow-orange-300 hover:-translate-y-0.5"
+            className="bg-brand text-white font-black text-base px-8 py-4 rounded-2xl hover:bg-brand-dark transition-all shadow-lg shadow-orange-200 hover:shadow-orange-300 hover:-translate-y-0.5 flex items-center justify-center"
           >
-            Začít zdarma →
+            Začít zdarma <Icons.ArrowRight />
           </a>
           <a
             href="#funkce"
@@ -148,42 +180,42 @@ function SocialProof() {
 
 const features = [
   {
-    icon: "📋",
+    icon: <Icons.Clipboard />,
     title: "Zakázky přehledně",
     desc: "Všechny zakázky na jednom místě. Stav, zákazník, adresa stavby, poznámky — vše okamžitě po ruce. Hledání a filtry podle stavu.",
   },
   {
-    icon: "💰",
+    icon: <Icons.Dollar />,
     title: "Ceník a nabídky",
     desc: "Importujte svůj ceník materiálů a prací. Sestavujte nabídky kliknutím — přidávejte položky, upravujte množství, kopírujte varianty.",
   },
   {
-    icon: "✅",
+    icon: <Icons.Check />,
     title: "Soupisy provedených prací",
     desc: "Zadávejte co bylo skutečně odvedeno. Aplikace automaticky počítá Plán / Nyní / Zbývá oproti původnímu rozpočtu.",
   },
   {
-    icon: "🧾",
+    icon: <Icons.Receipt />,
     title: "Fakturace s QR kódem",
     desc: "Vystavte fakturu na pár kliknutí. PDF se QR kódem pro okamžitou platbu. Automatické číslování, sledování uhrazení.",
   },
   {
-    icon: "📄",
+    icon: <Icons.File />,
     title: "PDF dokumenty",
     desc: "Nabídky, faktury a soupisy prací jako profesionální PDF. Odešlete zákazníkovi přímo z aplikace e-mailem.",
   },
   {
-    icon: "👥",
+    icon: <Icons.Users />,
     title: "Více uživatelů",
     desc: "Přidejte celý tým — každý zaměstnanec se přihlásí vlastním účtem. Správce firmy spravuje přístupy.",
   },
   {
-    icon: "📱",
+    icon: <Icons.Smartphone />,
     title: "Funguje na mobilu",
     desc: "Optimalizováno pro práci v terénu. Na stavbě zadáte soupis z telefonu za minutu.",
   },
   {
-    icon: "🎨",
+    icon: <Icons.Palette />,
     title: "Firemní identita",
     desc: "Nastavte svoji firemní barvu a logo. PDF dokumenty vypadají jako z profesionálního studia.",
   },
@@ -204,8 +236,10 @@ function Features() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {features.map((f) => (
-            <div key={f.title} className="bg-white rounded-2xl border border-slate-200 p-5 hover:border-brand hover:shadow-md transition-all group">
-              <span className="text-3xl mb-3 block">{f.icon}</span>
+            <div key={f.title} className="bg-white rounded-2xl border border-slate-200 p-6 hover:border-brand hover:shadow-md transition-all group">
+              <div className="w-12 h-12 bg-orange-50 text-brand rounded-xl flex items-center justify-center mb-4 group-hover:bg-brand group-hover:text-white transition-colors">
+                {f.icon}
+              </div>
               <h3 className="font-black text-slate-800 mb-2 group-hover:text-brand transition-colors">{f.title}</h3>
               <p className="text-sm text-slate-500 leading-relaxed">{f.desc}</p>
             </div>
@@ -279,9 +313,9 @@ function Pricing() {
             </ul>
             <a
               href={`${APP_URL}/register`}
-              className="block w-full text-center bg-brand text-white font-black text-sm py-3 rounded-xl hover:bg-brand-dark transition-all shadow-lg shadow-orange-500/20"
+              className="block w-full text-center bg-brand text-white font-black text-sm py-3 rounded-xl hover:bg-brand-dark transition-all shadow-lg shadow-orange-500/20 flex items-center justify-center gap-2"
             >
-              Vyzkoušet Pro →
+              Vyzkoušet Pro <Icons.ArrowRight />
             </a>
           </div>
         </div>
@@ -365,9 +399,9 @@ function Cta() {
         </p>
         <a
           href={`${APP_URL}/register`}
-          className="inline-block bg-brand text-white font-black text-lg px-10 py-5 rounded-2xl hover:bg-brand-dark transition-all shadow-xl shadow-orange-500/20 hover:-translate-y-0.5"
+          className="inline-flex items-center gap-2 bg-brand text-white font-black text-lg px-10 py-5 rounded-2xl hover:bg-brand-dark transition-all shadow-xl shadow-orange-500/20 hover:-translate-y-0.5"
         >
-          Začít zdarma →
+          Začít zdarma <Icons.ArrowRight />
         </a>
         <p className="text-slate-600 text-sm mt-4">
           Otázky? <a href="mailto:info@izodesk.cz" className="text-brand hover:underline">info@izodesk.cz</a>
@@ -397,102 +431,6 @@ function Footer() {
           <a href={`${APP_URL}/register`} className="hover:text-white transition-colors">Registrace</a>
           <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
           <a href="mailto:info@izodesk.cz" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Kontakt</a>
-        </div>
-      </div>
-    </footer>
-  );
-}
-
-// ─── Stránka ───────────────────────────────────────────────────────────────
-
-export default function HomePage() {
-  return (
-    <>
-      <Nav />
-      <Hero />
-      <SocialProof />
-      <Features />
-      <Pricing />
-      <Faq />
-      <Cta />
-      <Footer />
-    </>
-  );
-}
-</>
-  );
-}
-ge() {
-  return (
-    <>
-      <Nav />
-      <Hero />
-      <SocialProof />
-      <Features />
-      <Pricing />
-      <Faq />
-      <Cta />
-      <Footer />
-    </>
-  );
-}
--relaxed">{faq.a}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ─── CTA ───────────────────────────────────────────────────────────────────
-
-function Cta() {
-  return (
-    <section className="py-24 px-6 bg-slate-900">
-      <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-4xl font-black italic uppercase tracking-tighter text-white mb-4">
-          Přestaňte řešit papírování.
-          <br />
-          <span className="text-brand">Začněte vydělávat.</span>
-        </h2>
-        <p className="text-slate-400 mb-10 text-lg">
-          Vyzkoušejte IZODesk 14 dní zdarma. Bez kreditní karty.
-        </p>
-        <a
-          href={`${APP_URL}/register`}
-          className="inline-block bg-brand text-white font-black text-lg px-10 py-5 rounded-2xl hover:bg-brand-dark transition-all shadow-xl shadow-orange-500/20 hover:-translate-y-0.5"
-        >
-          Začít zdarma →
-        </a>
-        <p className="text-slate-600 text-sm mt-4">
-          Otázky? <a href="mailto:info@izodesk.cz" className="text-brand hover:underline">info@izodesk.cz</a>
-        </p>
-      </div>
-    </section>
-  );
-}
-
-// ─── Footer ────────────────────────────────────────────────────────────────
-
-function Footer() {
-  return (
-    <footer className="bg-slate-950 text-slate-500 py-12 px-6">
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
-        <div>
-          <div className="font-black italic text-xl tracking-tighter uppercase text-white mb-2">
-            IZO<span className="font-light text-slate-500 not-italic">Desk</span>
-          </div>
-          <p className="text-sm">Správa zakázek pro řemeslníky.</p>
-          <p className="text-xs mt-2">© {new Date().getFullYear()} IZODesk. Všechna práva vyhrazena.</p>
-        </div>
-        <div className="grid grid-cols-2 gap-x-16 gap-y-2 text-sm">
-          <a href="#funkce" className="hover:text-white transition-colors">Funkce</a>
-          <a href={`${APP_URL}/login`} className="hover:text-white transition-colors">Přihlásit se</a>
-          <a href="#cenik" className="hover:text-white transition-colors">Ceník</a>
-          <a href={`${APP_URL}/register`} className="hover:text-white transition-colors">Registrace</a>
-          <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
-          <a href="mailto:info@izodesk.cz" className="hover:text-white transition-colors">Kontakt</a>
         </div>
       </div>
     </footer>
