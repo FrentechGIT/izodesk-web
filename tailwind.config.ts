@@ -9,8 +9,10 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          DEFAULT: "#f79646",
-          dark: "#e07830",
+          DEFAULT: "#dc2626", // červená
+          dark: "#b91c1c", // tmavší červená
+          light: "#f87171", // světlejší červená (60% odstín)
+          lighter: "#fca5a5", // ještě světlejší (60% odstín)
         },
       },
     },

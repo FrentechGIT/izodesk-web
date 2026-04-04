@@ -1267,8 +1267,10 @@ video {
 }
 
 :root {
-  --brand: #f79646;
-  --brand-dark: #e07830;
+  --brand: #dc2626;
+  --brand-dark: #b91c1c;
+  --brand-light: #f87171;
+  --brand-lighter: #fca5a5;
 }
 
 html {

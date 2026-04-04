@@ -80,10 +80,10 @@ function Logo() {
 
 function Hero() {
   return (
-    <section className="pt-32 pb-20 px-6 bg-gradient-to-br from-slate-50 via-white to-orange-50">
+    <section className="pt-32 pb-20 px-6 bg-gradient-to-br from-slate-50 via-white to-red-50">
       <div className="max-w-4xl mx-auto text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 text-brand text-xs font-black uppercase tracking-widest px-4 py-2 rounded-full mb-8">
+        <div className="inline-flex items-center gap-2 bg-red-50 border border-red-200 text-brand text-xs font-black uppercase tracking-widest px-4 py-2 rounded-full mb-8">
           <span className="w-2 h-2 bg-brand rounded-full animate-pulse" />
           Navrženo pro elektrikáře a řemeslníky
         </div>
@@ -102,7 +102,7 @@ function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href={`${APP_URL}/register`}
-            className="bg-brand text-white font-black text-base px-8 py-4 rounded-2xl hover:bg-brand-dark transition-all shadow-lg shadow-orange-200 hover:shadow-orange-300 hover:-translate-y-0.5 flex items-center justify-center"
+            className="bg-brand text-white font-black text-base px-8 py-4 rounded-2xl hover:bg-brand-dark transition-all shadow-lg shadow-red-200 hover:shadow-red-300 hover:-translate-y-0.5 flex items-center justify-center"
           >
             Začít zdarma <Icons.ArrowRight />
           </a>
@@ -237,7 +237,7 @@ function Features() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {features.map((f) => (
             <div key={f.title} className="bg-white rounded-2xl border border-slate-200 p-6 hover:border-brand hover:shadow-md transition-all group">
-              <div className="w-12 h-12 bg-orange-50 text-brand rounded-xl flex items-center justify-center mb-4 group-hover:bg-brand group-hover:text-white transition-colors">
+              <div className="w-12 h-12 bg-red-50 text-brand rounded-xl flex items-center justify-center mb-4 group-hover:bg-brand group-hover:text-white transition-colors">
                 {f.icon}
               </div>
               <h3 className="font-black text-slate-800 mb-2 group-hover:text-brand transition-colors">{f.title}</h3>
@@ -313,7 +313,7 @@ function Pricing() {
             </ul>
             <a
               href={`${APP_URL}/register`}
-              className="block w-full text-center bg-brand text-white font-black text-sm py-3 rounded-xl hover:bg-brand-dark transition-all shadow-lg shadow-orange-500/20 flex items-center justify-center gap-2"
+              className="block w-full text-center bg-brand text-white font-black text-sm py-3 rounded-xl hover:bg-brand-dark transition-all shadow-lg shadow-red-500/20 flex items-center justify-center gap-2"
             >
               Vyzkoušet Pro <Icons.ArrowRight />
             </a>
@@ -399,7 +399,7 @@ function Cta() {
         </p>
         <a
           href={`${APP_URL}/register`}
-          className="inline-flex items-center gap-2 bg-brand text-white font-black text-lg px-10 py-5 rounded-2xl hover:bg-brand-dark transition-all shadow-xl shadow-orange-500/20 hover:-translate-y-0.5"
+          className="inline-flex items-center gap-2 bg-brand text-white font-black text-lg px-10 py-5 rounded-2xl hover:bg-brand-dark transition-all shadow-xl shadow-red-500/20 hover:-translate-y-0.5"
         >
           Začít zdarma <Icons.ArrowRight />
         </a>
