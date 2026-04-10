@@ -115,7 +115,6 @@ function Hero() {
         </div>
 
         <p className="text-xs text-slate-400 mt-4">
-          Bez kreditní karty · Zrušení kdykoliv
         </p>
       </div>
 
@@ -357,7 +356,7 @@ const faqs = [
   },
   {
     q: "Funguje aplikace bez internetu?",
-    a: "IZODesk vyžaduje připojení k internetu pro práci s daty. Plánujeme offline mode pro soupisy v terénu.",
+    a: "IZODesk vyžaduje připojení k internetu pro práci s daty.",
   },
 ];
 
@@ -396,7 +395,7 @@ function Cta() {
           <span className="text-brand">Začněte vydělávat.</span>
         </h2>
         <p className="text-slate-400 mb-10 text-lg">
-          Vyzkoušejte IZODesk. Bez kreditní karty.
+          Vyzkoušejte IZODesk.
         </p>
         <a
           href={`${APP_URL}/register`}
