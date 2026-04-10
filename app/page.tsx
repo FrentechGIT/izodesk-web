@@ -59,7 +59,7 @@ function Nav() {
             href={`${APP_URL}/register`}
             className="bg-brand text-white text-sm font-black px-5 py-2.5 rounded-xl hover:bg-brand-dark transition-colors shadow-sm"
           >
-            Vyzkoušet zdarma
+            Vyzkoušet
           </a>
         </div>
       </div>
@@ -104,7 +104,7 @@ function Hero() {
             href={`${APP_URL}/register`}
             className="bg-brand text-white font-black text-base px-8 py-4 rounded-2xl hover:bg-brand-dark transition-all shadow-lg shadow-red-200 hover:shadow-red-300 hover:-translate-y-0.5 flex items-center justify-center"
           >
-            Začít zdarma <Icons.ArrowRight />
+            Začít <Icons.ArrowRight />
           </a>
           <a
             href="#funkce"
@@ -115,7 +115,7 @@ function Hero() {
         </div>
 
         <p className="text-xs text-slate-400 mt-4">
-          Bez kreditní karty · 14 dní zdarma · Zrušení kdykoliv
+          Bez kreditní karty · Zrušení kdykoliv
         </p>
       </div>
 
@@ -284,7 +284,7 @@ function Pricing() {
               href={`${APP_URL}/register`}
               className="block w-full text-center bg-white border border-slate-300 text-slate-700 font-black text-sm py-3 rounded-xl hover:border-brand hover:text-brand transition-all"
             >
-              Začít zdarma
+              Začít
             </a>
           </div>
 
@@ -396,13 +396,13 @@ function Cta() {
           <span className="text-brand">Začněte vydělávat.</span>
         </h2>
         <p className="text-slate-400 mb-10 text-lg">
-          Vyzkoušejte IZODesk 14 dní zdarma. Bez kreditní karty.
+          Vyzkoušejte IZODesk. Bez kreditní karty.
         </p>
         <a
           href={`${APP_URL}/register`}
           className="inline-flex items-center gap-2 bg-brand text-white font-black text-lg px-10 py-5 rounded-2xl hover:bg-brand-dark transition-all shadow-xl shadow-red-500/20 hover:-translate-y-0.5"
         >
-          Začít zdarma <Icons.ArrowRight />
+          Začít <Icons.ArrowRight />
         </a>
         <p className="text-slate-600 text-sm mt-4">
           Otázky? <a href="mailto:info@izodesk.cz" className="text-brand hover:underline">info@izodesk.cz</a>
