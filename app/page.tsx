@@ -166,16 +166,30 @@ function SocialProof() {
         <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">
           Používají elektrikáři, instalatéři a stavební firmy
         </p>
-        <div className="flex flex-wrap justify-center gap-8 text-slate-300 font-black italic text-xl uppercase tracking-tighter">
-          {["CRAFT-IN · trojanovice", "Jurek temní práce · Tichá", "klempířství trnka · Frenštát p. Radhoštěm", "Stavby IZOtrade s.r.o · Tichá"].map((n) => (
-            <span key={n} className="hover:text-brand transition-colors cursor-default">{n}</span>
+        <div className="flex flex-wrap justify-center gap-3">
+          {[
+            { name: "CRAFT-IN", city: "Trojanovice" },
+            { name: "Jurek temní práce", city: "Tichá" },
+            { name: "Klempířství Trnka", city: "Frenštát p. Radhoštěm" },
+            { name: "Stavby IZOtrade s.r.o", city: "Tichá" },
+          ].map((company) => (
+            <span
+              key={company.name}
+              className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-bold text-slate-700 transition-all hover:border-brand/40 hover:text-brand"
+            >
+              <span className="uppercase tracking-tight">{company.name}</span>
+              <span className="text-slate-400">•</span>
+              <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">{company.city}</span>
+            </span>
           ))}
         </div>
-        <p className="text-sm text-slate-600 italic mt-8 max-w-2xl mx-auto leading-relaxed">
-          "Izodesk mi ušetřila spustu víkendů. Konečně nefakturuju v neděli večer."
-          <br />
-          <span className="text-slate-500 not-italic">— Jan, elektrikář z Příbora</span>
-        </p>
+        <div className="mt-8 mx-auto max-w-2xl rounded-2xl border border-red-100 bg-gradient-to-br from-red-50 to-white p-6 text-left shadow-sm">
+          <p className="text-base md:text-lg font-medium leading-relaxed text-slate-700">
+            „Izodesk mi ušetřila spoustu víkendů. Konečně nefakturuju v neděli večer.“
+          </p>
+          <p className="mt-4 text-sm font-black text-slate-800">Kupec Jan</p>
+          <p className="text-xs uppercase tracking-widest text-slate-500">Elektrikář • Příbor</p>
+        </div>
       </div>
     </section>
   );
