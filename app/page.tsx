@@ -167,10 +167,15 @@ function SocialProof() {
           Používají elektrikáři, instalatéři a stavební firmy
         </p>
         <div className="flex flex-wrap justify-center gap-8 text-slate-300 font-black italic text-xl uppercase tracking-tighter">
-          {["CRAFT-IN · trojanovice", "Jurek temní práce · Tichá", "klempířství trnka · Frenštát p. Radhoštěm", "Elektro Sedrik · Příbor", "Stavby IZOtrade s.r.o · Tichá"].map((n) => (
+          {["CRAFT-IN · trojanovice", "Jurek temní práce · Tichá", "klempířství trnka · Frenštát p. Radhoštěm", "Stavby IZOtrade s.r.o · Tichá"].map((n) => (
             <span key={n} className="hover:text-brand transition-colors cursor-default">{n}</span>
           ))}
         </div>
+        <p className="text-sm text-slate-600 italic mt-8 max-w-2xl mx-auto leading-relaxed">
+          "Izodesk mi ušetřila spustu víkendů. Konečně nefakturuju v neděli večer."
+          <br />
+          <span className="text-slate-500 not-italic">— Jan, elektrikář z Příbora</span>
+        </p>
       </div>
     </section>
   );
