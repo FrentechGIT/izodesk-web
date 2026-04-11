@@ -282,7 +282,7 @@ function Pricing() {
           <h2 className="text-4xl font-black italic uppercase tracking-tighter text-slate-900">
             Jednoduché ceny
           </h2>
-          <p className="text-slate-500 mt-4">Žádné skryté poplatky. Platíte měsíčně, zrušíte kdykoliv.</p>
+          <p className="text-slate-500 mt-4">Stojí jako 1 hodina vaší práce, ušetří jich desítky.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
