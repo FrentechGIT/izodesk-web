@@ -1,6 +1,7 @@
 // app/page.tsx — IZODesk marketingový web
 
 import Link from "next/link";
+import ScrollReveal from "./scroll-reveal";
 
 const APP_URL = "https://app.izodesk.cz";
 
@@ -80,7 +81,7 @@ function Logo() {
 
 function Hero() {
   return (
-    <section className="pt-32 pb-20 px-6 bg-gradient-to-br from-slate-50 via-white to-red-50">
+    <section data-reveal className="pt-32 pb-20 px-6 bg-gradient-to-br from-slate-50 via-white to-red-50">
       <div className="max-w-4xl mx-auto text-center">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-red-50 border border-red-200 text-brand text-xs font-black uppercase tracking-widest px-4 py-2 rounded-full mb-8">
@@ -161,7 +162,7 @@ function Hero() {
 
 function SocialProof() {
   return (
-    <section className="py-12 bg-white border-y border-slate-100">
+    <section data-reveal className="py-12 bg-white border-y border-slate-100">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">
           Používají elektrikáři, instalatéři a stavební firmy
@@ -243,7 +244,7 @@ const features = [
 
 function Features() {
   return (
-    <section id="funkce" className="py-24 px-6 bg-slate-50">
+    <section data-reveal id="funkce" className="py-24 px-6 bg-slate-50">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-xs font-black text-brand uppercase tracking-widest mb-3">Funkce</p>
@@ -274,7 +275,7 @@ function Features() {
 
 function Pricing() {
   return (
-    <section id="cenik" className="py-24 px-6 bg-white">
+    <section data-reveal id="cenik" className="py-24 px-6 bg-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-xs font-black text-brand uppercase tracking-widest mb-3">Ceník</p>
@@ -382,7 +383,7 @@ const faqs = [
 
 function Faq() {
   return (
-    <section id="faq" className="py-24 px-6 bg-slate-50">
+    <section data-reveal id="faq" className="py-24 px-6 bg-slate-50">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-xs font-black text-brand uppercase tracking-widest mb-3">FAQ</p>
@@ -407,7 +408,7 @@ function Faq() {
 
 function Cta() {
   return (
-    <section className="py-24 px-6 bg-slate-900">
+    <section data-reveal className="py-24 px-6 bg-slate-900">
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-4xl font-black italic uppercase tracking-tighter text-white mb-4">
           Přestaňte řešit papírování.
@@ -462,6 +463,7 @@ function Footer() {
 export default function HomePage() {
   return (
     <>
+      <ScrollReveal />
       <Nav />
       <Hero />
       <SocialProof />
