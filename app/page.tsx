@@ -167,7 +167,7 @@ function SocialProof() {
           Používají elektrikáři, instalatéři a stavební firmy
         </p>
         <div className="flex flex-wrap justify-center gap-8 text-slate-300 font-black italic text-xl uppercase tracking-tighter">
-          {["Elektro Novák", "Instalace CZ", "Stavby Brno", "ElektroPlus", "MontáGenius"].map((n) => (
+          {["CRAFT-IN trojanovice", "Jurek temní práce Tichá", "klempířství trnka", "Frenštát p. Radhoštěm", "Elektro Sedrik Příbor", "Stavby IZOtrade s.r.o Tichá"].map((n) => (
             <span key={n} className="hover:text-brand transition-colors cursor-default">{n}</span>
           ))}
         </div>
