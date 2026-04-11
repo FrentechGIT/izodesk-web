@@ -175,17 +175,18 @@ function SocialProof() {
           ].map((company) => (
             <span
               key={company.name}
-              className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-bold text-slate-700 transition-all hover:border-brand/40 hover:text-brand"
+              className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm transition-all hover:border-brand hover:shadow-sm"
             >
-              <span className="uppercase tracking-tight">{company.name}</span>
+              <span className="font-black uppercase tracking-tight text-slate-700">{company.name}</span>
               <span className="text-slate-400">•</span>
-              <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">{company.city}</span>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">{company.city}</span>
             </span>
           ))}
         </div>
-        <div className="mt-8 mx-auto max-w-2xl rounded-2xl border border-red-100 bg-gradient-to-br from-red-50 to-white p-6 text-left shadow-sm">
-          <p className="text-base md:text-lg font-medium leading-relaxed text-slate-700">
-            „Izodesk mi ušetřila spoustu víkendů. Konečně nefakturuju v neděli večer.“
+        <div className="mt-8 mx-auto max-w-2xl rounded-2xl border border-slate-200 bg-white p-6 text-left shadow-sm">
+          <p className="text-xs font-black text-brand uppercase tracking-widest mb-3">Reference</p>
+          <p className="text-base md:text-lg font-medium leading-relaxed text-slate-600">
+            „IZODesk mi ušetřila spoustu víkendů. Konečně nefakturuju v neděli večer.“
           </p>
           <p className="mt-4 text-sm font-black text-slate-800">Kupec Jan</p>
           <p className="text-xs uppercase tracking-widest text-slate-500">Elektrikář • Příbor</p>
