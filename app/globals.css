@@ -16,12 +16,12 @@ html {
 @media (prefers-reduced-motion: no-preference) {
   html.reveal-enabled [data-reveal] {
     opacity: 0;
-    transform: translateY(36px) scale(0.985);
-    filter: blur(2px);
+    transform: translateY(52px) scale(0.98);
+    filter: blur(3px);
     transition:
-      opacity 650ms ease,
-      transform 650ms ease,
-      filter 650ms ease;
+      opacity 780ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 780ms cubic-bezier(0.22, 1, 0.36, 1),
+      filter 780ms cubic-bezier(0.22, 1, 0.36, 1);
     will-change: opacity, transform, filter;
   }
 

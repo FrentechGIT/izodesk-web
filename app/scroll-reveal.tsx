@@ -7,7 +7,7 @@ export default function ScrollReveal() {
     const sections = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
     if (sections.length === 0) return;
 
-    const initialFold = window.innerHeight * 0.9;
+    const initialFold = window.innerHeight * 0.6;
     sections.forEach((section) => {
       if (section.getBoundingClientRect().top <= initialFold) {
         section.classList.add("is-visible");
@@ -25,7 +25,7 @@ export default function ScrollReveal() {
           }
         });
       },
-      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.22, rootMargin: "0px 0px -12% 0px" }
     );
 
     sections.forEach((section) => {
